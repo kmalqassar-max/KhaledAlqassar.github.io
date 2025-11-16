@@ -2,309 +2,398 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Khutbah & Projects – Khaled Alqassar</title>
+  <title>Friday Khutbah | Khaled Alqassar</title>
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Khutbah page extra styles -->
   <style>
-    /* Layout sections */
-    .section-block {
-      margin: 40px 0;
+    body {
+      background: #f3f4ff;
     }
 
-    .section-block h2 {
-      font-size: 24px;
-      margin-bottom: 10px;
+    .page-shell {
+      max-width: 1200px;
+      margin: 40px auto 60px;
+      padding: 24px;
+      border-radius: 24px;
+      background: #ffffff;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
     }
 
-    .section-block p {
-      line-height: 1.6;
+    .kh-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 24px;
     }
 
-    /* Top anchors */
-    .section-nav {
-      margin: 10px 0 25px;
-      font-size: 14px;
-    }
-
-    .section-nav a {
-      margin-right: 12px;
-      text-decoration: none;
-      border-radius: 999px;
-      padding: 6px 12px;
-      border: 1px solid rgba(0,0,0,0.15);
+    .kh-eyebrow {
       font-size: 13px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #6366f1;
+      font-weight: 600;
     }
 
-    /* Video area */
-    .video-section {
-      margin: 20px 0 10px;
+    .kh-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .kh-subtitle {
+      font-size: 15px;
+      color: #4b5563;
+      max-width: 680px;
+    }
+
+    .kh-nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .kh-nav-links a {
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #e5e7eb;
+      text-decoration: none;
+      color: #111827;
+      background: #f9fafb;
+    }
+
+    .kh-nav-links a:hover {
+      border-color: #6366f1;
+      color: #111827;
+      background: #eef2ff;
+    }
+
+    .section-label {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
     }
 
     .video-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 10px;
     }
 
     .video-box {
-      background: #fff;
-      border-radius: 16px;
+      background: #f9fafb;
+      border-radius: 18px;
       padding: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
     }
 
-    iframe {
+    .video-box iframe {
       width: 100%;
-      height: 200px;
+      aspect-ratio: 16/9;
       border-radius: 12px;
       border: none;
+      display: block;
     }
 
-    /* Project cards */
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
+    .video-tagline {
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 6px;
     }
 
-    .project-card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 16px 18px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    }
+    @media (max-width: 640px) {
+      .page-shell {
+        margin: 16px;
+        padding: 16px;
+        border-radius: 18px;
+      }
 
-    .project-card h3 {
-      margin-top: 0;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .tag {
-      display: inline-block;
-      font-size: 11px;
-      padding: 3px 8px;
-      border-radius: 999px;
-      background: rgba(0,0,0,0.04);
-      margin-bottom: 6px;
-    }
-
-    .project-card ul {
-      padding-left: 18px;
-      margin: 8px 0 0;
-      font-size: 14px;
-    }
-
-    /* Small links */
-    .back-links {
-      margin-top: 10px;
-      margin-bottom: 20px;
-      font-size: 14px;
-    }
-
-    .back-links a {
-      margin-right: 10px;
+      .kh-title {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
 
-<body class="lang-en">
+<body>
   <main class="page-shell">
-    <section class="card">
-      <h1>Khutbah & Community Projects</h1>
-      <p>
-        A hub for Friday khutbahs, community projects, lecture series,
-        and live programs led by Sheikh Khaled Alqassar.
+    <header class="kh-header">
+      <div class="kh-eyebrow">Friday Khutbah • Video Library</div>
+      <h1 class="kh-title">Khaled Alqassar – Khutbah Collection</h1>
+      <p class="kh-subtitle">
+        A growing archive of Friday khutbahs, reminders, and Islamic talks by Sheikh Khaled Alqassar,
+        available for students, imams, and anyone seeking guidance.
       </p>
 
-      <div class="back-links">
+      <div class="kh-nav-links">
         <a href="index.html">← Back to Arabic Home</a>
-        |
         <a href="en.html">English Home →</a>
       </div>
+    </header>
 
-      <!-- Anchor navigation inside this page -->
-      <div class="section-nav">
-        <a href="#khutbah">Friday Khutbah</a>
-        <a href="#projects">Teaching & Community Projects</a>
-        <a href="#lectures">Lecture Series</a>
-        <a href="#live">Live & Online Sessions</a>
+    <div class="section-label">Section 1 · Friday Khutbah Videos</div>
+    <p class="video-tagline">
+      All videos below are embedded from YouTube. Scroll and explore the collection.
+    </p>
+
+    <section id="khutbah-videos" class="video-grid">
+
+      <!-- 1 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/hOVH-O-P9sk" allowfullscreen></iframe>
       </div>
 
-      <!-- 1) FRIDAY KHUTBAH VIDEOS -->
-      <section id="khutbah" class="section-block">
-        <h2>Friday Khutbah Videos</h2>
-        <p>
-          A selection of Friday khutbahs and reminders for the community.
-        </p>
+      <!-- 2 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/bM78sdJRmz8" allowfullscreen></iframe>
+      </div>
 
-        <div class="video-section">
-          <div class="video-grid">
+      <!-- 3 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/H2Pn1N2Jnew" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/j9D1tHDd8d0"
-                title="Khutbah video 1"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 4 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/qLj9ovxCg_Y" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/iOYkV0k4j-o"
-                title="Khutbah video 2"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 5 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/j9D1tHDd8d0" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/YtdgS9h1vjQ"
-                title="Khutbah video 3"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 6 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/iOYkV0k4j-o" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/wNLIZkCmFQg"
-                title="Khutbah video 4"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 7 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/YtdgS9h1vjQ" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/kxOqp6kdblY"
-                title="Khutbah video 5"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 8 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/wNLIZkCmFQg" allowfullscreen></iframe>
+      </div>
 
-            <div class="video-box">
-              <iframe
-                src="https://www.youtube.com/embed/WejFdDnkJ2w"
-                title="Khutbah video 6"
-                allowfullscreen>
-              </iframe>
-            </div>
+      <!-- 9 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/kxOqp6kdblY" allowfullscreen></iframe>
+      </div>
 
-          </div>
-        </div>
-      </section>
+      <!-- 10 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/WejFdDnkJ2w" allowfullscreen></iframe>
+      </div>
 
-      <!-- 2) TEACHING & COMMUNITY PROJECTS -->
-      <section id="projects" class="section-block">
-        <h2>Teaching & Community Projects</h2>
-        <p>
-          Ongoing initiatives designed to strengthen faith, support families,
-          and build healthy mosque communities in the Gulf and beyond.
-        </p>
+      <!-- 11 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/KZCtgRN4KNw" allowfullscreen></iframe>
+      </div>
 
-        <div class="project-grid">
-          <div class="project-card">
-            <span class="tag">Youth & Family</span>
-            <h3>Youth Mentorship & Tarbiyah Circles</h3>
-            <p>
-              Small-group sessions for teenagers and university students,
-              focusing on identity, faith, and real-life challenges.
-            </p>
-            <ul>
-              <li>Bi-weekly halaqahs in the mosque</li>
-              <li>Q&A sessions on faith, habits, and character</li>
-              <li>Practical guidance for school & family life</li>
-            </ul>
-          </div>
+      <!-- 12 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/gIO4Y5dwpfk" allowfullscreen></iframe>
+      </div>
 
-          <div class="project-card">
-            <span class="tag">Qur’an & Knowledge</span>
-            <h3>Community Qur’an Circles</h3>
-            <p>
-              Structured gatherings for reciting, reflecting, and living
-              the Qur’an together as a community.
-            </p>
-            <ul>
-              <li>Focus on tadabbur and implementation</li>
-              <li>Suitable for different age groups</li>
-              <li>Can be hosted in mosques or homes</li>
-            </ul>
-          </div>
+      <!-- 13 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/VEyeTHiax-I" allowfullscreen></iframe>
+      </div>
 
-          <div class="project-card">
-            <span class="tag">Ramadan & Seasons</span>
-            <h3>Ramadan Programs & Iftar Talks</h3>
-            <p>
-              Special talks, nightly reminders, and community iftar programs
-              tailored for Ramadan and blessed seasons.
-            </p>
-            <ul>
-              <li>Short pre-Isha or Taraweeh reminders</li>
-              <li>Thematic series for the whole month</li>
-              <li>Custom programs for families & youth</li>
-            </ul>
-          </div>
+      <!-- 14 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/sFzEiO_FcYI" allowfullscreen></iframe>
+      </div>
 
-          <div class="project-card">
-            <span class="tag">Leadership</span>
-            <h3>Masjid Leadership Workshops</h3>
-            <p>
-              Training for imams, khatibs, and community leaders on how to
-              serve effectively in a modern context.
-            </p>
-            <ul>
-              <li>Communication & public speaking</li>
-              <li>Community engagement & conflict resolution</li>
-              <li>Vision, planning, and teamwork</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+      <!-- 15 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Za08nXx3tZE" allowfullscreen></iframe>
+      </div>
 
-      <!-- 3) LECTURE SERIES & PROGRAMS -->
-      <section id="lectures" class="section-block">
-        <h2>Lecture Series & Programs</h2>
-        <p>
-          Structured series that can be delivered in mosques, Islamic centers,
-          schools, or as online programs.
-        </p>
-        <ul>
-          <li>
-            <strong>Foundations of Faith:</strong>
-            aaqidah, pillars of Islam, and living with certainty.
-          </li>
-          <li>
-            <strong>Purification of the Heart:</strong>
-            tackling envy, anger, arrogance, and spiritual laziness.
-          </li>
-          <li>
-            <strong>Family in Islam:</strong>
-            mercy, communication, and raising children with iman.
-          </li>
-          <li>
-            <strong>Living Islam in the Modern World:</strong>
-            balancing work, social media, and spirituality.
-          </li>
-        </ul>
-      </section>
+      <!-- 16 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/nlUREtN4E5o" allowfullscreen></iframe>
+      </div>
 
-      <!-- 4) LIVE & ONLINE SESSIONS -->
-      <section id="live" class="section-block">
-        <h2>Live & Online Sessions</h2>
-        <p>
-          Sheikh Khaled is available for on-site khutbahs, weekend programs,
-          online lectures, and Q&A sessions with communities worldwide.
-        </p>
-        <p>
-          For bookings and collaboration:
-        </p>
-        <ul>
-          <li><strong>Email:</strong> contact@khaledaqassar.com</li>
-          <li><strong>Instagram:</strong> @khaledalqassar</li>
-          <li><strong>YouTube:</strong> Khaled AlQassar</li>
-        </ul>
-      </section>
+      <!-- 17 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/illS2YBYHZ0" allowfullscreen></iframe>
+      </div>
+
+      <!-- 18 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/B84QX9TkpaE" allowfullscreen></iframe>
+      </div>
+
+      <!-- 19 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/3cunnhM2KKg" allowfullscreen></iframe>
+      </div>
+
+      <!-- 20 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/9AIzirS8hHk" allowfullscreen></iframe>
+      </div>
+
+      <!-- 21 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/hHELfAF7DM0" allowfullscreen></iframe>
+      </div>
+
+      <!-- 22 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/cJ-Miz29LVk" allowfullscreen></iframe>
+      </div>
+
+      <!-- 23 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/IEhfbi37pJw" allowfullscreen></iframe>
+      </div>
+
+      <!-- 24 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Z9s77-fzhIg" allowfullscreen></iframe>
+      </div>
+
+      <!-- 25 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/wN01wBJ2ep4" allowfullscreen></iframe>
+      </div>
+
+      <!-- 26 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/EDh5bQN1KPg" allowfullscreen></iframe>
+      </div>
+
+      <!-- 27 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/2EsGBVApXFU" allowfullscreen></iframe>
+      </div>
+
+      <!-- 28 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/P_uarBwZ-jA" allowfullscreen></iframe>
+      </div>
+
+      <!-- 29 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/_xszfWBnG9k" allowfullscreen></iframe>
+      </div>
+
+      <!-- 30 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/yr25gUu67Ko" allowfullscreen></iframe>
+      </div>
+
+      <!-- 31 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/PiTo6Gk8Mns" allowfullscreen></iframe>
+      </div>
+
+      <!-- 32 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/yXpBRK_Jzmw" allowfullscreen></iframe>
+      </div>
+
+      <!-- 33 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Zo1h5uPHmWM" allowfullscreen></iframe>
+      </div>
+
+      <!-- 34 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/oOo3ET27Qsg" allowfullscreen></iframe>
+      </div>
+
+      <!-- 35 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Su2L9BarmaA" allowfullscreen></iframe>
+      </div>
+
+      <!-- 36 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/_8b1Yjz8j60" allowfullscreen></iframe>
+      </div>
+
+      <!-- 37 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/qanRdKrPhPc" allowfullscreen></iframe>
+      </div>
+
+      <!-- 38 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/Z0I7BeHoiyY" allowfullscreen></iframe>
+      </div>
+
+      <!-- 39 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/wGKoT-KisIQ" allowfullscreen></iframe>
+      </div>
+
+      <!-- 40 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/ZjAI3uXc46Y" allowfullscreen></iframe>
+      </div>
+
+      <!-- 41 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/3I9F43sWEig" allowfullscreen></iframe>
+      </div>
+
+      <!-- 42 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/14b7t6RFMCk" allowfullscreen></iframe>
+      </div>
+
+      <!-- 43 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/wsLF-tgGVC4" allowfullscreen></iframe>
+      </div>
+
+      <!-- 44 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/EGzJ2SvQkAw" allowfullscreen></iframe>
+      </div>
+
+      <!-- 45 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/hJav5JHy82w" allowfullscreen></iframe>
+      </div>
+
+      <!-- 46 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/vfGTcG8XwU8" allowfullscreen></iframe>
+      </div>
+
+      <!-- 47 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/mLnCXuOdO98" allowfullscreen></iframe>
+      </div>
+
+      <!-- 48 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/0XgnOPgQITo" allowfullscreen></iframe>
+      </div>
+
+      <!-- 49 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/on-b42w3Fu0" allowfullscreen></iframe>
+      </div>
+
+      <!-- 50 -->
+      <div class="video-box">
+        <iframe src="https://www.youtube.com/embed/nZjz-WDdGhE" allowfullscreen></iframe>
+      </div>
 
     </section>
   </main>
