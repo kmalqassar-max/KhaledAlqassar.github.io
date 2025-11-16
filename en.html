@@ -1,114 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="en" dir="ltr">
+<head>
     <meta charset="UTF-8" />
-    <title>Khaled AlQassar | Imam Masjid/title>
+    <title>Khaled Alqassar | Imam & Mosque Preacher</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="page">
-      <main class="card">
-        <!-- NAVBAR -->
-        <header class="navbar">
-          <div class="brand-wrap">
-            <div class="brand-mark"></div>
-            <div>
-              <div class="brand-title">Khaled AlQassar</div>
-              <div class="brand-role">Imam Masjid</div>
+</head>
+
+<body>
+<div class="page">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <div class="brand">
+                <div class="brand-mark"></div>
+                <div>
+                    <div class="brand-name">Khaled Alqassar</div>
+                    <div class="brand-role">Imam & Mosque Preacher</div>
+                </div>
             </div>
-          </div>
 
-          <nav class="lang-switch">
-            <a class="lang-btn" href="index.html">
-              <span class="flag">🇰🇼</span>
-              <span>العربية</span>
-            </a>
-            <a class="lang-btn active" href="en.html">
-              <span class="flag">🇬🇧</span>
-              <span>English</span>
-            </a>
-          </nav>
-        </header>
+            <nav class="lang-switch">
+                <a href="index.html">العربية</a>
+                <a class="active" href="en.html">English 🇬🇧</a>
+            </nav>
+        </div>
+    </header>
 
-        <!-- LEFT: EN hero -->
-        <section>
-          <div class="hero-eyebrow">Imam Masjid</div>
-          <h1 class="hero-name">
-            Khaled <span>AlQassar</span>
-          </h1>
-          <p class="hero-tagline">
-            I help brands and leaders build a strong digital presence, clear
-            messaging, and real impact across the GCC market.
-          </p>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Khaled Alqassar</h1>
+                <p class="hero-role">Imam, Mosque Speaker, Islamic Educator</p>
 
-          <div class="hero-pills">
-            <span class="pill primary">Business Consulting</span>
-            <span class="pill">Personal Brand Strategy</span>
-            <span class="pill">Content &amp; Positioning</span>
-            <span class="pill">Influencer Partnerships</span>
-          </div>
+                <p class="hero-description">
+                    With over 10 years of experience in Islamic guidance, mosque leadership,
+                    community support, and religious education. Helping individuals and communities 
+                    grow spiritually with clarity, wisdom, and compassion.
+                </p>
 
-          <div class="hero-meta">
-            <div class="meta-item">
-              <span class="meta-label">Experience</span>
-              <span class="meta-value">10+ years in business</span>
+                <div class="hero-buttons">
+                    <a class="btn-primary" href="#contact">Book Consultation</a>
+                    <a class="btn-secondary" href="#services">Services</a>
+                </div>
             </div>
-            <div class="meta-item">
-              <span class="meta-label">Focus</span>
-              <span class="meta-value">Service, hospitality & digital economy</span>
+
+            <div class="hero-photo">
+                <div class="photo-circle"></div>
             </div>
-          </div>
+        </div>
+    </section>
 
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="mailto:contact@khaledalqassar.com">
-              Book a consultation
-            </a>
-            <a class="btn btn-ghost" href="#contact">
-              Collaboration &amp; media inquiries
-            </a>
-          </div>
-        </section>
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Areas of Expertise</h2>
 
-        <!-- RIGHT: profile & contact -->
-        <aside class="aside-card" id="contact">
-          <div class="avatar"></div>
-          <h2 class="aside-title">Let’s build something meaningful</h2>
-          <p class="aside-sub">
-            Open to working with brands, founders and media projects that share
-            a future-focused mindset and authentic values.
-          </p>
+            <div class="tag-list">
+                <span class="tag">Mosque Leadership</span>
+                <span class="tag">Friday Sermons</span>
+                <span class="tag">Islamic Teaching</span>
+                <span class="tag">Community Support</span>
+                <span class="tag">Counseling</span>
+            </div>
+        </div>
+    </section>
 
-          <ul class="contact-list">
-            <li class="contact-item">
-              <span class="contact-label">Email</span>
-              <span class="contact-value">contact@khaledalqassar.com</span>
-            </li>
-            <li class="contact-item">
-              <span class="contact-label">Instagram</span>
-              <span class="contact-value">@khaledalqassar</span>
-            </li>
-            <li class="contact-item">
-              <span class="contact-label">YouTube</span>
-              <span class="contact-value">Khaled AlQassar</span>
-            </li>
-          </ul>
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact</h2>
 
-          <div class="social-row">
-            <span class="social-chip">Business advisory</span>
-            <span class="social-chip">Leadership workshops</span>
-          </div>
+            <p class="contact-text">
+                For booking sermons, mosque programs, community sessions or Islamic guidance,
+                feel free to reach out.
+            </p>
 
-          <div class="footer-note">
-            <span>AR / EN portfolio in one place</span>
-            <span>© <span id="year"></span> Khaled AlQassar</span>
-          </div>
-        </aside>
-      </main>
-    </div>
+            <div class="contact-box">
+                <div><strong>Email</strong><br>contact@khaledaqassar.com</div>
+                <div><strong>Instagram</strong><br>@khaledalqassar</div>
+                <div><strong>YouTube</strong><br>Khaled AlQassar</div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-      document.getElementById("year").textContent =
-        new Date().getFullYear().toString();
-    </script>
-  </body>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            Khaled AlQassar © 2025
+        </div>
+    </footer>
+
+</div>
+</body>
 </html>
