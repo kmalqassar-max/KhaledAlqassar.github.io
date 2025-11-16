@@ -2,74 +2,115 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Khaled Alqassar | Imam & Speaker</title>
+  <title>Khaled Alqassar | Imam & Mosque Preacher</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <main class="page-shell">
-    <section class="main-card">
-
-      <!-- TOP BAR -->
-      <header class="top-bar">
-        <h2>Khaled Alqassar</h2>
-        <div>
-          <a href="index.html" class="lang-pill">عربي</a>
-          <span class="lang-pill active">English</span>
-        </div>
-      </header>
-
-      <!-- CONTENT -->
-      <section class="content-grid">
-        
-        <!-- LEFT -->
-        <div>
-          <h1 class="hero-title">
-            Imam & Mosque Speaker<br>
-            delivering with <span class="hero-highlight">clarity & balance.</span>
-          </h1>
-
-          <p class="hero-subtitle">
-            With over 10 years of experience in leading prayers, khutbah,
-            and Islamic teaching, Sheikh Khaled connects faith to real life,
-            families, and youth.
-          </p>
-
-          <div class="action-row">
-            <a href="khutbah-en.html" class="btn btn-primary">Friday Khutbah</a>
-            <a href="khutbah-ar.html" class="btn btn-ghost">خطب الجمعة</a>
+  <div class="page">
+    <main class="card">
+      <!-- Top row: avatar + name + language switch -->
+      <header class="card-header">
+        <div class="avatar-block">
+          <div class="avatar"></div>
+          <div>
+            <div class="name-main">Khaled Alqassar</div>
+            <div class="name-sub">Imam &amp; Mosque Preacher</div>
           </div>
         </div>
 
-        <!-- RIGHT -->
-        <aside>
-          <article class="info-card">
-            <div class="info-title">Work Areas</div>
-            <ul class="info-list">
-              <li>Imamate</li>
-              <li>Friday sermons</li>
-              <li>Lessons & lectures</li>
-              <li>Youth programs</li>
-            </ul>
-          </article>
+        <nav class="lang-switch">
+          <!-- TODO: สร้างหน้าอาหรับแล้วค่อยเปลี่ยนลิงก์เป็น arabic.html -->
+          <a href="index.html" class="lang-pill">العربية</a>
+          <a href="en.html" class="lang-pill active">English</a>
+        </nav>
+      </header>
 
-          <article class="info-card">
-            <div class="info-title">Contact</div>
-            <ul class="info-list">
-              <li>email: contact@example.com</li>
-              <li>Instagram: @khaledalqassar</li>
-            </ul>
-          </article>
-        </aside>
+      <!-- Main content grid -->
+      <section class="card-body">
+        <!-- Left: profile -->
+        <div class="col profile">
+          <h1 class="hero-title">
+            Imam, Mosque Speaker, Islamic Educator
+          </h1>
 
+          <p class="hero-subtitle">
+            Helping communities grow in faith with wisdom and compassion.
+          </p>
+
+          <div class="chip-row">
+            <span class="chip">10+ years of experience</span>
+            <span class="chip">Mosque leadership</span>
+            <span class="chip">Community support</span>
+          </div>
+
+          <p class="hero-text">
+            With over 10 years of experience in Islamic guidance, mosque
+            leadership, community support, and religious education. Helping
+            individuals and communities grow spiritually with clarity, wisdom,
+            and compassion.
+          </p>
+
+          <div class="btn-row">
+            <!-- แก้ href ได้ตามต้องการ -->
+            <a
+              href="mailto:contact@khaledalqassar.com?subject=Booking%20consultation"
+              class="btn primary"
+            >
+              Book Consultation
+            </a>
+            <a href="khutbah-en.html" class="btn ghost">
+              View Services
+            </a>
+          </div>
+        </div>
+
+        <!-- Middle: Areas of expertise -->
+        <div class="col">
+          <h2 class="section-title">Areas of Expertise</h2>
+          <ul class="bullet-list">
+            <li>Mosque Leadership &amp; Management</li>
+            <li>Friday Sermons &amp; Public Speaking</li>
+            <li>Islamic Teaching &amp; Education</li>
+            <li>Community Support &amp; Counseling</li>
+          </ul>
+        </div>
+
+        <!-- Right: Contact -->
+        <div class="col">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-text">
+            For booking sermons, mosque programs, community sessions or Islamic
+            guidance, feel free to reach out.
+          </p>
+
+          <p class="section-text">
+            <strong>Email</strong><br />
+            <a href="mailto:contact@khaledalqassar.com">
+              contact@khaledalqassar.com
+            </a>
+          </p>
+
+          <p class="section-text">
+            <strong>Instagram</strong><br />
+            <a href="https://instagram.com/khaledalqassar" target="_blank">
+              @khaledalqassar
+            </a>
+          </p>
+
+          <p class="section-text">
+            <strong>YouTube</strong><br />
+            Khaled AlQassar
+          </p>
+        </div>
       </section>
 
-      <footer class="footer-row">
+      <!-- Footer -->
+      <footer class="card-footer">
         <span>© 2025 Khaled Alqassar</span>
-        <span>Imam & Mosque Speaker</span>
+        <span>Imam · Mosque Speaker · Islamic Educator</span>
       </footer>
-
-    </section>
-  </main>
+    </main>
+  </div>
 </body>
 </html>
