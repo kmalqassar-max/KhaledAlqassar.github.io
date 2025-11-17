@@ -1,91 +1,365 @@
-/* ======= Global Theme ======= */
+Style.css
+
+
+/* ====== Base ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
-  --bg: #f4eee7;
+  --bg-start: #f2f7ff;
+  --bg-end: #e7e5ff;
   --card-bg: #ffffff;
-  --card-border: #e5d8c8;
-  --text-main: #333;
-  --text-light: #666;
-  --accent: #8b6f47; /* เบจเข้มทองๆ */
-  --accent-light: #c9b59a;
-  --radius: 22px;
+  --text-main: #111827;
+  --text-sub: #4b5563;
+  --text-light: #6b7280;
+  --brand: #2563eb;
+  --brand-soft: #e0ecff;
+  --pill-bg: #f3f4ff;
+  --border-soft: #e5e7eb;
+  --shadow-soft: 0 28px 60px rgba(15, 23, 42, 0.16);
+  --radius-card: 32px;
+  --radius-pill: 999px;
+  --radius-btn: 999px;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Tahoma", sans-serif;
-  background: var(--bg);
-  direction: rtl;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  color: var(--text-main);
+  background: radial-gradient(circle at top left, var(--bg-start), var(--bg-end));
 }
 
+/* layout กลางจอ */
 .page {
-  max-width: 1100px;
-  margin: 50px auto;
-  background: var(--card-bg);
-  padding: 40px;
-  border-radius: var(--radius);
-  border: 1px solid var(--card-border);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
 }
 
-/* ======= Headers ======= */
-h1 {
-  margin-top: 0;
-  font-size: 32px;
+/* ====== Card หลัก ====== */
+.card {
+  width: 100%;
+  max-width: 1040px;
+  background: var(--card-bg);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  padding: 32px 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* header การ์ด */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* avatar + ชื่อ */
+.avatar-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 22px;
+  background: radial-gradient(circle at 20% 0%, #facc15, #6366f1);
+  box-shadow: 0 12px 30px rgba(79, 70, 229, 0.4);
+}
+
+.name-main {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.name-sub {
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+/* language pills */
+.lang-switch {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-pill {
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid transparent;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--text-sub);
+  background: #f3f4ff;
+}
+
+.lang-pill.active {
+  background: var(--brand);
+  color: #ffffff;
+  border-color: var(--brand);
+}
+
+/* ====== body 3 คอลัมน์ ====== */
+.card-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 32px;
+}
+
+.col {
+  min-width: 0;
+}
+
+/* hero (ซ้าย) */
+.hero-title {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.25;
+}
+
+.hero-subtitle {
+  margin: 0 0 12px;
+  color: var(--brand);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--pill-bg);
+  color: #374151;
+}
+
+.hero-text {
+  margin: 0 0 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-sub);
+}
+
+/* ปุ่ม */
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: var(--radius-btn);
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease,
+    color 0.1s ease;
+}
+
+.btn.primary {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+.btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(37, 99, 235, 0.45);
+}
+
+.btn.ghost {
+  background: #ffffff;
+  color: var(--text-main);
+  border-color: var(--border-soft);
+}
+
+.btn.ghost:hover {
+  background: var(--brand-soft);
+}
+
+/* section ทั่วไป */
+.section-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bullet-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.bullet-list li + li {
+  margin-top: 4px;
+}
+
+.section-text {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.section-text a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.section-text a:hover {
+  text-decoration: underline;
+}
+
+/* footer ในการ์ด */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-light);
+  border-top: 1px solid #f3f4f6;
+  padding-top: 10px;
+  margin-top: 4px;
+}
+
+/* ====== Video grid (Khutbah pages) ====== */
+.sections-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-block h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+}
+
+.section-block p {
+  margin: 0 0 12px;
+  color: var(--text-sub);
+  font-size: 14px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.video-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.video-card-title {
+  font-size: 13px;
+  margin: 0 0 6px;
   color: var(--text-main);
 }
 
-h2 {
-  color: var(--accent);
-  font-size: 26px;
-}
-
-p {
-  color: var(--text-light);
-  line-height: 1.8;
-}
-
-/* ======= Lists ======= */
-ul {
-  padding-right: 20px;
-}
-
-/* ======= Language Switch (footer) ======= */
-.footer-lang {
-  text-align: center;
-  margin-top: 45px;
-}
-
-.footer-lang .lang-switch {
-  display: inline-flex;
-  gap: 10px;
-}
-
-.footer-lang button {
-  padding: 6px 18px;
-  border-radius: 18px;
-  border: 1px solid var(--card-border);
-  background: white;
-  cursor: pointer;
-  font-size: 14px;
-}
-
-.footer-lang button.active {
-  background: var(--accent);
-  color: white;
-  border-color: var(--accent);
-}
-
-/* ===== Buttons ===== */
-.btn-primary {
-  background: var(--accent);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 18px;
+.video-card iframe {
+  width: 100%;
+  height: 155px;
+  border-radius: 10px;
   border: none;
-  cursor: pointer;
-  font-size: 14px;
 }
 
-.btn-primary:hover {
-  background: var(--accent-light);
+/* ====== RTL สำหรับอาหรับ ====== */
+body.rtl {
+  direction: rtl;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Arabic",
+    "Geeza Pro", "Segoe UI", sans-serif;
+}
+
+body.rtl .card-body {
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+}
+
+body.rtl .bullet-list {
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+/* header rtl */
+body.rtl .card-header {
+  flex-direction: row-reverse;
+}
+
+body.rtl .avatar-block {
+  flex-direction: row-reverse;
+}
+
+body.rtl .lang-switch {
+  flex-direction: row;
+}
+
+/* footer rtl */
+body.rtl .card-footer {
+  flex-direction: row-reverse;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 900px) {
+  .card-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .card {
+    padding: 24px 18px 20px;
+    border-radius: 24px;
+  }
+
+  .card-body {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  body.rtl .card-header {
+    align-items: flex-end;
+  }
+
+  .card-footer {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  body.rtl .card-footer {
+    align-items: flex-end;
+  }
 }
